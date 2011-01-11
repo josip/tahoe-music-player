@@ -1,6 +1,7 @@
-= Installing Music Player for Tahoe (codename 'Daaw') =
+# Installing Music Player for Tahoe (codename 'Daaw') #
 
-== Maths and Systems Theory quiz ==
+## Maths and Systems Theory quiz ##
+
 If you already have a 'build' directory, feel free to skip this step.
 
 To build player's code you'll have to do a not-so-simple
@@ -11,19 +12,20 @@ I strongly hope that you took advanced Maths, Systems Theory
 and computing related courses.
 
 Just in case you haven't, you can type in next line into your shell:
-  $ python manage.py roll
-  running roll
-  Calculating dependencies...
-  Compressing <something>...
-  ...
-  You're ready to rock 'n' roll!
+    $ python manage.py roll
+    running roll
+    Calculating dependencies...
+    Compressing <something>...
+    ...
+    You're ready to rock 'n' roll!
 
 Bravo, you're done! (just make sure you have a 'build' directory)
 
 (And if you're one of those who prefer to do it by-hand (and keyboard),
 this file isn't a place for you.)
 
-== Battle for the Configuration File ==
+## Battle for the Configuration File ##
+
 Player's configuration file is a real beast on its own,
 and in order to edit it we must prepare ourselves really good,
 otherwise, we're doomed (actually, only you are)!
@@ -36,10 +38,10 @@ Read next few steps carefully, the beast is just around the corner!
   
    Just in case you've forgotten how to create Tahoe dirnodes, run this from your
    shell:
-   $ tahoe mkdir music
-   <top secret no.1>
-   $ tahoe mkdir settings
-   <top secret no.2>
+    $ tahoe mkdir music
+    <top secret no.1>
+    $ tahoe mkdir settings
+    <top secret no.2>
   
    (make sure Tahoe-LAFS is running on your computer before issuing those commands)
    Pro tip: create a (S)FTP account with your music directory as it's home directory
@@ -68,7 +70,7 @@ Read next few steps carefully, the beast is just around the corner!
   Note: If you'll have to change the CAPs after the 'first run', change them
   in both config.json file and the applications' interface (Gear menu > Settings > Caps).
 
-== The Critical Step ==
+## The Critical Step ##
 After we've conquered the beast of configuration file we're ready to
 upload the player to the Tahoe-LAFS!
 
@@ -97,7 +99,7 @@ Now, stand up, and with evident excitement on your face,
 say the following phrase:
   "Yay! It's working!"
 
-== Fin ==
+## Fin ##
 You can now upload your music to the <top secret no.1> dirnode and
 launch music player by typing this URI into your web browser:
   http://localhost:3456/static/musicplayer
@@ -106,6 +108,8 @@ If it appears that something isn't working, it probably means
 that you haven't read 'The Critical Step' carefully enough, but
 if you're sure you did it as instructed, please report all bugs you encounter
 on the following address:
+  https://github.com/josip/tahoe-music-player/issues
+or look for the older ones:
   http://tahoe-lafs.org/trac/tahoe-lafs/ticket/1023
 or ask around for josipl on tahoe-lafs IRC channel (irc.freenode.net).
 
@@ -113,3 +117,4 @@ We hope you're going to enjoy your music even more with Music Player for Tahoe-L
 
 Note: During the initial collection scan (or any other), it's suggested to
 turn off Firebug or Web Inspector's XMLHttpRequest logging feature, for sake of performance.
+
