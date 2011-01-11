@@ -1,0 +1,47 @@
+body {
+    font-family: palatino, georgia, verdana, arial, sans-serif;
+    font-size: 10pt;
+    text-align: center;
+}
+
+#content {
+    text-align: left;
+    margin: 2em auto;
+    line-height: 1.4em;
+    display: none;
+}
+
+h1 {
+    font-weight: normal;
+    line-height: 1.4em;
+}
+
+.example-code {
+    font-family: monaco, andale mono, monospace;
+    font-size: 9pt;
+    white-space: pre;
+    padding-left: 2em;
+}
+
+.example-output {
+    font-family: monaco, andale mono, monospace;
+    font-size: 9pt;
+    white-space: pre-wrap;
+    padding-left: 2em;
+    color: gray;
+}
+
+.try-code {
+    border: 1px dotted black;
+}
+
+.intra-wiki {
+    color: black;
+    text-decoration: none;
+    border-bottom: solid 1px gray;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}

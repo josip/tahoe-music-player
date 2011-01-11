@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>Music Player for Tahoe-LAFS</title>
+    
+    <link rel="stylesheet" href="resources/css/reset.css" type="text/css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="resources/css/text.css" type="text/css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="resources/css/app.css" type="text/css" media="screen" charset="utf-8"/>
+    
+    <script type="text/javascript" charset="utf-8">
+      this.da = {};
+    </script>
+    
+    <script src="libs/vendor/vendor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/util/console.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="libs/vendor/mootools-1.2.4-core-ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/vendor/mootools-1.2.4.4-more.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/vendor/persist-js/src/persist.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/vendor/soundmanager/script/soundmanager2.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" charset="utf-8">
+      this.da.vendor.Persist = Persist;
+      this.da.vendor.SoundManger = SoundManager;
+      this.da.vendor.soundManager = soundManager;
+    </script>
+    <script src="libs/vendor/SoundManager.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/vendor/roar/Roar.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/vendor/javascript-last.fm-api/lastfm.api.md5.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/vendor/javascript-last.fm-api/lastfm.api.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="libs/db/db.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/db/PersistStorage.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/db/BrowserCouch.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/vendor/Math.uuid.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/util/util.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/db/DocumentTemplate.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/util/Goal.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/util/BinaryFile.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/util/ID3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/util/ID3v2.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/util/ID3v1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/util/ID3v1.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/util/PlaylistExporters.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="libs/ui/ui.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/ui/Column.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/ui/NavigationColumn.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/ui/Menu.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/ui/Dialog.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/ui/ProgressBar.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/ui/SegmentedProgressBar.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/vendor/Roar.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="Application.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="doctemplates/Setting.js" type="text/javascript" charset="utf-8"></script>
+    <script src="doctemplates/Artist.js" type="text/javascript" charset="utf-8"></script>
+    <script src="doctemplates/Album.js" type="text/javascript" charset="utf-8"></script>
+    <script src="doctemplates/Song.js" type="text/javascript" charset="utf-8"></script>
+    <script src="doctemplates/Playlist.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="services/services.js" type="text/javascript" charset="utf-8"></script>
+    <script src="libs/vendor/LastFM.js" type="text/javascript" charset="utf-8"></script>
+    <script src="services/lastfm.js" type="text/javascript" charset="utf-8"></script>
+    <script src="services/albumCover.js" type="text/javascript" charset="utf-8"></script>
+    <script src="services/artistInfo.js" type="text/javascript" charset="utf-8"></script>
+    <script src="services/recommendations.js" type="text/javascript" charset="utf-8"></script>
+    <script src="services/musicVideo.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="controllers/controllers.js" type="text/javascript" charset="utf-8"></script>
+    <script src="controllers/Navigation.js" type="text/javascript" charset="utf-8"></script>
+    <script src="controllers/default_columns.js" type="text/javascript" charset="utf-8"></script>
+    <script src="controllers/Player.js" type="text/javascript" charset="utf-8"></script>
+    <script src="controllers/Settings.js" type="text/javascript" charset="utf-8"></script>
+    <script src="controllers/CollectionScanner.js" type="text/javascript" charset="utf-8"></script>
+    <script src="controllers/SongContext.js" type="text/javascript" charset="utf-8"></script>
+    <script src="controllers/Search.js" type="text/javascript" charset="utf-8"></script>
+    <script src="controllers/default_contexts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="controllers/Playlist.js" type="text/javascript" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="loader">Loading...</div>
+    <div id="panes" style="display:none">
+      <div id="navigation_pane"></div>
+      <div id="player_pane"></div>
+    </div>
+  </body>
+</html>

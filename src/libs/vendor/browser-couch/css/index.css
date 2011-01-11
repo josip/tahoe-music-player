@@ -1,0 +1,31 @@
+body {
+    width: 20em;
+    font-family: helvetica;
+}
+
+h1 {
+    font-weight: normal;
+}
+
+.test {
+    font-family: monospace;
+}
+
+.in-progress {
+    background-color: yellow;
+}
+
+.successful {
+    background-color: lawnGreen;
+}
+
+.failed {
+    background-color: red;
+}
+
+.pending {
+}
+
+.skipped {
+    background-color: lightGrey;
+}

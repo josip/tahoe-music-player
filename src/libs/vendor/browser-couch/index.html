@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" media="all"
+        href="css/docs.css" />
+  <title>BrowserCouch Documentation</title>
+</head>
+<body>
+<div id="content">
+  <div id="overview" class="documentation" style="display: none;">
+    <h1>BrowserCouch Documentation</h1>
+    <p>BrowserCouch is an attempt at an
+    in-browser <a href="http://en.wikipedia.org/wiki/MapReduce">MapReduce</a>
+    implementation. It's written entirely in JavaScript and intended
+    to work on all browsers, gracefully upgrading when support for
+    better efficiency or feature set is detected.</p>
+    <p>Not coincidentally, this library is intended to mimic the
+    functionality
+    of <a href="http://en.wikipedia.org/wiki/CouchDB">CouchDB</a> on
+    the client-side, and may even support integration with CouchDB in
+    the future.</p>
+
+    <h2>Why?</h2>
+
+    <p>This prototype is intended as a response to Vladimir
+    Vukićević's blog post
+    entitled <a href="http://blog.vlad1.com/2009/04/06/html5-web-storage-and-sql/">HTML5
+    Web Storage and SQL</a>. A CouchDB-like API seems like a nice
+    solution to persistent storage on the Web because so many of its
+    semantics are delegated out to the JavaScript language, which
+    makes it potentially easy to standardize.  Furthermore, the
+    MapReduce paradigm also naturally takes advantage of multiple
+    processor cores&mdash;something that is increasingly common in
+    today's computing devices.</p>
+
+    <h2>Things to do</h2>
+
+    <p>To learn how to use BrowserCouch, check out the
+    work-in-progress <a class="intra-wiki"
+    href="tutorial.html">tutorial</a>.</p>
+
+    <p>Aside from that, you can run the <a class="intra-wiki"
+    href="tests.html">test suite</a> and the <a class="intra-wiki"
+    href="big.html">semi-large data set test</a>, though they're not
+    particularly exciting. In the future, we'd like to make CouchDB's
+    <a href="http://couchdb.apache.org/screenshots.html">Futon</a>
+    client work entirely using BrowserCouch as its backend instead of
+    a CouchDB server, but that's a ways away.</p>
+
+    <p>If you'd like to see more code samples of what the BrowserCouch
+    API currently looks like, check out the <a class="intra-wiki"
+    href="#js/tests.js">annotated source code for the test suite</a>.
+    You can also read the <a class="intra-wiki"
+    href="#js/browser-couch.js">primary source code documentation</a>
+    for more on BrowserCouch's implementation.</p>
+  </div>
+</div>
+</body>
+<script src="js/ext/jquery.js"></script>
+<script src="js/ext/wikicreole.js"></script>
+<script type="text/javascript" src="js/ext/docs.js"></script>
+</html>
